@@ -1,6 +1,5 @@
 let g:colors_name="bla"
 
-hi Normal           ctermfg=231     ctermbg=235     cterm=none
 hi CursorLine       ctermfg=none    ctermbg=237     cterm=none
 hi CursorLineNr     ctermfg=249     ctermbg=237     cterm=bold
 hi ColorColumn      ctermfg=none    ctermbg=237     cterm=none

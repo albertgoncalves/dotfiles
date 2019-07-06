@@ -1,28 +1,39 @@
 #!/usr/bin/env bash
 
+set -eu
+
 . .env
 
 prelude () {
     if [ $(uname -s) = "Darwin" ]; then
-        export VIMRC=darwin.vimrc
-        export BASHRC=darwin.bashrc
+        export VIMRC="darwin.vimrc"
+        export BASHRC="darwin.bashrc"
+        export BLA="bla.vim"
+        cp "$WD/bash/profile" "$HOME/.bash_profile"
     else
-        export VIMRC=linux.vimrc
-        export BASHRC=linux.bashrc
+        export VIMRC="linux.vimrc"
+        export BASHRC="linux.bashrc"
+        export BLA="blx.vim"
     fi
 }
 
-postlude () {
-    f () {
-        bash "$WD/$1/setup.sh" $2
-    }
+interlude () {
+    bash "$WD/vim/setup.sh" $VIMRC $BLA
+    bash "$WD/bash/setup.sh" $BASHRC
+}
 
-    f vim $VIMRC
-    f bash $BASHRC
+postlude () {
+    if [ ! $(uname -s) = "Darwin" ]; then
+        x="$HOME/.bashrc"
+        y="$WD/tmp.bashrc"
+        cat /etc/skel/.bashrc $x > $y
+        mv $y $x
+    fi
 }
 
 main () {
     prelude
+    interlude
     postlude
 }
 

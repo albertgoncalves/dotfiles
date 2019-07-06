@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+. .env
+
+prelude () {
+    if [ $(uname -s) = "Darwin" ]; then
+        export VIMRC=darwin.vimrc
+        export BASHRC=darwin.bashrc
+    else
+        export VIMRC=linux.vimrc
+        export BASHRC=linux.bashrc
+    fi
+}
+
+postlude () {
+    f () {
+        bash "$WD/$1/setup.sh" $2
+    }
+
+    f vim $VIMRC
+    f bash $BASHRC
+}
+
+main () {
+    prelude
+    postlude
+}
+
+main

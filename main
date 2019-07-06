@@ -26,7 +26,7 @@ postlude () {
     if [ ! $(uname -s) = "Darwin" ]; then
         x="$HOME/.bashrc"
         y="$WD/tmp.bashrc"
-        cat /etc/skel/.bashrc $x > $y
+        echo "" | cat /etc/skel/.bashrc - $x > $y
         mv $y $x
     fi
 }

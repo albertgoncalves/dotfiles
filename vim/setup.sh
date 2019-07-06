@@ -12,21 +12,22 @@ prelude () {
     done
 }
 
-vimrc() {
+exposition () {
     cp "$WD/vim/$VIMRC" "$HOME/.vimrc"
 }
 
-colors () {
+development () {
     x="$VIM_DIR/colors/bla.vim"
     if [ ! -f $x ]; then
         cp "$WD/vim/bla.vim" $x
     fi
 }
 
-syntax () {
+recapitulation () {
     f () {
-        if [ ! -f "$VIM_DIR/$2" ]; then
-            curl "$GIT_URL/$1" >"$VIM_DIR/$2"
+        x="$VIM_DIR/$2"
+        if [ ! -f $x ]; then
+            curl "$GIT_URL/$1" > $x
         fi
     }
 
@@ -42,9 +43,9 @@ syntax () {
 
 main () {
     prelude
-    vimrc
-    colors
-    syntax
+    exposition
+    development
+    recapitulation
 }
 
 main

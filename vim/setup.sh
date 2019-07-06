@@ -3,9 +3,10 @@
 set -eu
 
 VIMRC=$1
+BLA=$2
 
 prelude () {
-    for x in "$VIM_DIR/colors/" "$VIM_DIR/syntax/"; do
+    for x in "$HOME/.vim/colors/" "$HOME/.vim/syntax/"; do
         if [ ! -d $x ]; then
             mkdir -p $x
         fi
@@ -17,15 +18,15 @@ exposition () {
 }
 
 development () {
-    x="$VIM_DIR/colors/bla.vim"
+    x="$HOME/.vim/colors/bla.vim"
     if [ ! -f $x ]; then
-        cp "$WD/vim/bla.vim" $x
+        cp "$WD/vim/$BLA" $x
     fi
 }
 
 recapitulation () {
     f () {
-        x="$VIM_DIR/$2"
+        x="$HOME/.vim/$2"
         if [ ! -f $x ]; then
             curl "$GIT_URL/$1" > $x
         fi

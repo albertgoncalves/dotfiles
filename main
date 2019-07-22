@@ -14,34 +14,33 @@ vim_shared () {
     mkdir -p "$HOME/.vim/syntax"
 
     f () {
-        if [ ! -f "$HOME/.vim/$2" ]; then
-            curl "$GIT_URL/$1" > "$HOME/.vim/$2"
+        if [ ! -f "$HOME/.vim/syntax/$2" ]; then
+            curl "$GIT_URL/$1" > "$HOME/.vim/syntax/$2"
         fi
     }
 
-    f "futhark-vim/simplify/syntax/fut.vim" "syntax/fut.vim"
-    f "haskell.vim/master/syntax/haskell.vim" "syntax/haskell.vim"
-    f "vim-javascript-syntax/master/syntax/javascript.vim" \
-        "syntax/javascript.vim"
-    f "vim-nix/master/syntax/nix.vim" "syntax/nix.vim"
-    f "stan.vim/master/syntax/stan.vim" "syntax/stan.vim"
-    f "typescript-vim/master/syntax/typescript.vim" "syntax/typescript.vim"
-    f "rust.vim/master/syntax/rust.vim" "syntax/rust.vim"
+    f "futhark-vim/simplify/syntax/fut.vim"                 "fut.vim"
+    f "haskell.vim/master/syntax/haskell.vim"               "haskell.vim"
+    f "vim-javascript-syntax/master/syntax/javascript.vim"  "javascript.vim"
+    f "vim-nix/master/syntax/nix.vim"                       "nix.vim"
+    f "stan.vim/master/syntax/stan.vim"                     "stan.vim"
+    f "typescript-vim/master/syntax/typescript.vim"         "typescript.vim"
+    f "rust.vim/master/syntax/rust.vim"                     "rust.vim"
 }
 
 if [ $(uname -s) = "Darwin" ]; then
-    cp "$WD/bash/profile" "$HOME/.bash_profile"
+    cp "$WD/bash/profile"       "$HOME/.bash_profile"
     cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
     bash_shared
     vim_shared
-    cp "$WD/vim/darwin.vimrc" "$HOME/.vimrc"
-    cp "$WD/vim/bla.vim" "$HOME/.vim/colors/bla.vim"
+    cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
+    cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
 else
-    cp "$WD/bash/linux.bashrc" "$HOME/.bashrc"
+    cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
     bash_shared
     echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"
-    mv "$WD/tmp.bashrc" "$HOME/.bashrc"
+    mv "$WD/tmp.bashrc"         "$HOME/.bashrc"
     vim_shared
-    cp "$WD/vim/linux.vimrc" "$HOME/.vimrc"
-    cp "$WD/vim/blx.vim" "$HOME/.vim/colors/bla.vim"
+    cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
+    cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
 fi

@@ -10,16 +10,12 @@ bash_shared () {
 }
 
 vim_shared () {
-    for x in "$HOME/.vim/colors" "$HOME/.vim/syntax"; do
-        if [ ! -d $x ]; then
-            mkdir -p $x
-        fi
-    done
+    mkdir -p "$HOME/.vim/colors"
+    mkdir -p "$HOME/.vim/syntax"
 
     f () {
-        x="$HOME/.vim/$2"
-        if [ ! -f $x ]; then
-            curl "$GIT_URL/$1" > $x
+        if [ ! -f "$HOME/.vim/$2" ]; then
+            curl "$GIT_URL/$1" > "$HOME/.vim/$2"
         fi
     }
 
@@ -43,7 +39,7 @@ if [ $(uname -s) = "Darwin" ]; then
 else
     cp "$WD/bash/linux.bashrc" "$HOME/.bashrc"
     bash_shared
-    echo "" | cat /etc/skel/.bashrc - "$HOME/.bashrc" > "$WD/tmp.bashrc"
+    echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"
     mv "$WD/tmp.bashrc" "$HOME/.bashrc"
     vim_shared
     cp "$WD/vim/linux.vimrc" "$HOME/.vimrc"

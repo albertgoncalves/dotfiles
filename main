@@ -4,37 +4,43 @@ set -eu
 
 . .env
 
-prelude () {
-    if [ $(uname -s) = "Darwin" ]; then
-        export VIMRC="darwin.vimrc"
-        export BASHRC="darwin.bashrc"
-        export BLA="bla.vim"
-        cp "$WD/bash/profile" "$HOME/.bash_profile"
-    else
-        export VIMRC="linux.vimrc"
-        export BASHRC="linux.bashrc"
-        export BLA="blx.vim"
-    fi
+bash_shared () {
+    echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"
+    echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
 }
 
-interlude () {
-    bash "$WD/vim/setup.sh" $VIMRC $BLA
-    bash "$WD/bash/setup.sh" $BASHRC
+vim_shared () {
+    mkdir -p "$HOME/.vim/colors"
+    mkdir -p "$HOME/.vim/syntax"
+
+    f () {
+        if [ ! -f "$HOME/.vim/syntax/$2" ]; then
+            curl "$GIT_URL/$1" > "$HOME/.vim/syntax/$2"
+        fi
+    }
+
+    f "futhark-vim/simplify/syntax/fut.vim"                 "fut.vim"
+    f "haskell.vim/master/syntax/haskell.vim"               "haskell.vim"
+    f "vim-javascript-syntax/master/syntax/javascript.vim"  "javascript.vim"
+    f "vim-nix/master/syntax/nix.vim"                       "nix.vim"
+    f "stan.vim/master/syntax/stan.vim"                     "stan.vim"
+    f "typescript-vim/master/syntax/typescript.vim"         "typescript.vim"
+    f "rust.vim/master/syntax/rust.vim"                     "rust.vim"
 }
 
-postlude () {
-    if [ ! $(uname -s) = "Darwin" ]; then
-        x="$HOME/.bashrc"
-        y="$WD/tmp.bashrc"
-        echo "" | cat /etc/skel/.bashrc - $x > $y
-        mv $y $x
-    fi
-}
-
-main () {
-    prelude
-    interlude
-    postlude
-}
-
-main
+if [ $(uname -s) = "Darwin" ]; then
+    cp "$WD/bash/profile"       "$HOME/.bash_profile"
+    cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
+    bash_shared
+    vim_shared
+    cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
+    cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
+else
+    cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
+    bash_shared
+    echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"
+    mv "$WD/tmp.bashrc"         "$HOME/.bashrc"
+    vim_shared
+    cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
+    cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
+fi

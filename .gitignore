@@ -1,7 +1,8 @@
 *
 !.gitignore
 !README.md
-!setup.sh
+!shell.nix
+!.shellhook
 !bash/
 !profile
 !*.bashrc

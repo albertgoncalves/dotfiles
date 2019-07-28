@@ -28,7 +28,7 @@ vim_shared () {
     f "rust.vim/master/syntax/rust.vim"                     "rust.vim"
 }
 
-if [ $(uname -s) = "Darwin" ]; then
+if [ "$(uname -s)" = "Darwin" ]; then
     cp "$WD/bash/profile"       "$HOME/.bash_profile"
     cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
     bash_shared

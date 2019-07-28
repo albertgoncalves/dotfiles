@@ -6,17 +6,16 @@
 
 ---
 ### Prepare
- * `path/to/dotfiles/.env` exporting the following:
+ * `path/to/dotfiles/.env` exporting:
 
 ```
 export GIT_URL="https://raw.githubusercontent.com/..."
-export WD
-WD=$(pwd)
 ```
 
 ---
 ### Invoke
 (This may be a **little** destructive.)
 ```
-./main
+$ nix-shell
+[nix-shell:path/to/dotfiles]$ ./main
 ```

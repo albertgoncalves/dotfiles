@@ -6,3 +6,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
 else
     alias open="xdg-open"
 fi
+
+export WD
+WD=$(pwd)

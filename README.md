@@ -10,7 +10,8 @@
 
 ```
 export GIT_URL="https://raw.githubusercontent.com/..."
-export WD=$(pwd)
+export WD
+WD=$(pwd)
 ```
 
 ---

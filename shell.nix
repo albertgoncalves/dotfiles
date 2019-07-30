@@ -1,6 +1,5 @@
-{ pkgs ? import <nixpkgs> {} }:
-with pkgs; mkShell {
-    name = "dotfiles";
+with import <nixpkgs> {};
+mkShell {
     buildInputs = [
         shellcheck
     ];

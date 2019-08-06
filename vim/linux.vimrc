@@ -27,4 +27,5 @@ autocmd BufNewFile,BufRead *.nix setlocal filetype=nix
 autocmd BufNewFile,BufRead *.rs setlocal filetype=rust
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.pest setlocal filetype=rust
 autocmd BufRead *.go retab

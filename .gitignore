@@ -9,4 +9,6 @@
 !vim/
 !*.vim
 !*.vimrc
+!tmux/
+!*.conf
 !main

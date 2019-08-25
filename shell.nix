@@ -4,6 +4,7 @@ mkShell {
         shellcheck
     ];
     shellHook = ''
+        . .env
         . .shellhook
     '';
 }

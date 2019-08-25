@@ -2,8 +2,6 @@
 
 set -eu
 
-. .env
-
 bash_shared () {
     echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"
     echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
@@ -44,3 +42,4 @@ else
     cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
     cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
 fi
+cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"

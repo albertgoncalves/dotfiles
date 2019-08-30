@@ -33,6 +33,7 @@ if [ "$(uname -s)" = "Darwin" ]; then
     vim_shared
     cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
     cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
+    cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
 else
     cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
     bash_shared

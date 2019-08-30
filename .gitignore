@@ -11,4 +11,6 @@
 !*.vimrc
 !tmux/
 !*.conf
+!alacritty/
+!*.yml
 !main

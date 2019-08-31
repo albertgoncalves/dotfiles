@@ -1,8 +1,8 @@
 # dotfiles
 
 ### Install
- * [Conda](https://anaconda.org/)
  * [Nix](https://nixos.org/nix/)
+ * [Conda](https://anaconda.org/) (optional)
 
 ---
 ### Prepare

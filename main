@@ -4,7 +4,9 @@ set -eu
 
 bash_shared () {
     echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"
-    echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
+    if [ -d "$HOME/miniconda3" ]; then
+        echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
+    fi
 }
 
 vim_shared () {
@@ -33,6 +35,9 @@ if [ "$(uname -s)" = "Darwin" ]; then
     vim_shared
     cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
     cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
+    if [ ! -d "$HOME/.config/alacritty" ]; then
+        mkdir -p "$HOME/.config/alacritty"
+    fi
     cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
 else
     cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"

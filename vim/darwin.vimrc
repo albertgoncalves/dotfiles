@@ -9,6 +9,7 @@ set shiftwidth=4
 set expandtab
 set t_Co=256
 set autoindent
+set pastetoggle=<F2>
 
 colo bla
 

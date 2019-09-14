@@ -12,7 +12,7 @@ set autoindent
 set pastetoggle=<F2>
 
 colo bla
-hi Normal ctermfg=231 ctermbg=233 cterm=none
+hi Normal ctermfg=255 ctermbg=233 cterm=none
 
 xnoremap <leader>b xi()<Esc>P
 xnoremap <leader>c xi{}<Esc>P

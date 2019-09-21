@@ -47,5 +47,7 @@ else
     vim_shared
     cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
     cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
+    cp "$WD/i3/i3.config"       "$HOME/.config/i3/config"
+    cp "$WD/i3/i3status.config" "$HOME/.config/i3status/config"
 fi
 cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"

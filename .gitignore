@@ -16,3 +16,5 @@
 !main
 !i3/
 !*.config
+!bin/
+!cbacklight

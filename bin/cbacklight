@@ -7,6 +7,12 @@
 # Set / increase brightness to sysfs directly
 #
 
+# NOTE: add the following lines to the end of the `$ sudo visudo`
+#   ```
+#       <username> ALL = (ALL) ALL
+#       <username> ALL = (root) NOPASSWD: /home/<username>/bin/cbacklight
+#   ```
+
 import glob
 import os
 import argparse

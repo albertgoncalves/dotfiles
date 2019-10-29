@@ -21,6 +21,7 @@ xnoremap <leader>q xi""<Esc>P
 
 vmap <leader>y :w! /tmp/vitmp<CR>
 nmap <leader>p :r! cat /tmp/vitmp<CR>
+set clipboard=unnamedplus
 
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * retab

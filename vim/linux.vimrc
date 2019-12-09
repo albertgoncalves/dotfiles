@@ -33,3 +33,4 @@ autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.pest setlocal filetype=rust
 autocmd BufRead *.go retab
+autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2

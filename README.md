@@ -1,12 +1,12 @@
 # dotfiles
 
 ### Install
- * [Nix](https://nixos.org/nix/)
- * [Conda](https://anaconda.org/) (optional)
+*   [Nix](https://nixos.org/nix/)
+*   [Conda](https://anaconda.org/) (optional)
 
 ---
 ### Prepare
- * `path/to/dotfiles/.env` exporting:
+*   `path/to/dotfiles/.env` exporting:
 
 ```
 export GIT_URL="https://raw.githubusercontent.com/..."

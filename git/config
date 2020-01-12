@@ -1,0 +1,8 @@
+[push]
+    default = simple
+[core]
+    editor = vim
+[alias]
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[credential]
+    helper = store

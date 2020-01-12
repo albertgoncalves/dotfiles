@@ -55,3 +55,7 @@ else
     cp "$WD/bin/cbacklight" "$HOME/bin/cbacklight"
 fi
 cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
+if [ ! -f "$HOME/.gitconfig" ]; then
+    echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
+    cp "$WD/git/config"         "$HOME/.gitconfig"
+fi

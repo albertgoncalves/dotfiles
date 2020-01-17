@@ -53,7 +53,7 @@ else
         mkdir "$HOME/bin"
     fi
     cp "$WD/bin/cbacklight" "$HOME/bin/cbacklight"
-    cp "$WD/i3/fehbh"       "$HOME/.fehbh"
+    cp "$WD/i3/fehbg"       "$HOME/.fehbg"
 fi
 cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
 if [ ! -f "$HOME/.gitconfig" ]; then

@@ -16,6 +16,7 @@
 !main
 !i3/
 !*.config
+!fehbg
 !bin/
 !cbacklight
 !git/

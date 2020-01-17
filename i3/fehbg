@@ -1,0 +1,4 @@
+#!/bin/sh
+
+nix-shell -p redshift --run "redshift -l 40.7:74.0 -b 1.0:1.0" &
+feh --bg-fill "/home/albert/Pictures/Abstract Trees Bokeh.jpg"

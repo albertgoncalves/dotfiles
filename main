@@ -52,9 +52,9 @@ else
     if [ ! -d "$HOME/bin" ]; then
         mkdir "$HOME/bin"
     fi
-    cp "$WD/bin/cbacklight" "$HOME/bin/cbacklight"
-    cp "$WD/i3/fehbg"       "$HOME/.fehbg"
-    cp "$WD/i3/redshift"    "$HOME/.redshift"
+    cp "$WD/bin/cbacklight"     "$HOME/bin/cbacklight"
+    cp "$WD/i3/fehbg"           "$HOME/.fehbg"
+    cp "$WD/i3/redshift"        "$HOME/.redshift"
 fi
 cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
 if [ ! -f "$HOME/.gitconfig" ]; then

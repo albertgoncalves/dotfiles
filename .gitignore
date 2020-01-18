@@ -17,6 +17,7 @@
 !i3/
 !*.config
 !fehbg
+!redshift
 !bin/
 !cbacklight
 !git/

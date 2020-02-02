@@ -10,6 +10,7 @@ set expandtab
 set t_Co=256
 set autoindent
 set pastetoggle=<F2>
+set timeout timeoutlen=0
 
 colo bla
 

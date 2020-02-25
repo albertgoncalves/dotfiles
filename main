@@ -26,6 +26,7 @@ vim_shared () {
     f "stan.vim/master/syntax/stan.vim"                     "stan.vim"
     f "typescript-vim/master/syntax/typescript.vim"         "typescript.vim"
     f "rust.vim/master/syntax/rust.vim"                     "rust.vim"
+    f "vim-crystal/master/syntax/crystal.vim"               "crystal.vim"
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then

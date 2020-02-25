@@ -29,5 +29,6 @@ autocmd BufNewFile,BufRead *.nix setlocal filetype=nix
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.pest setlocal filetype=rust
+autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufRead *.go retab
-autocmd FileType ruby setlocal shiftwidth=2 softtabstop=2
+autocmd FileType ruby,crystal setlocal shiftwidth=2 softtabstop=2

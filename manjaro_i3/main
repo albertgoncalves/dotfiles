@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-set -eu -o pipefail
+set -eu
 
+cp bash_profile     "$HOME/.bash_profile"
+cp bashrc           "$HOME/.bashrc"
 cp dmenurc          "$HOME/.dmenurc"
 cp compton.conf     "$HOME/.config/compton.conf"
 cp volumeicon       "$HOME/.config/volumeicon/volumeicon"

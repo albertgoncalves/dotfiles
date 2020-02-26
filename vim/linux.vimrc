@@ -35,3 +35,6 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufRead *.go retab
 autocmd FileType ruby,crystal setlocal shiftwidth=2 softtabstop=2
+
+runtime macros/matchit.vim
+let b:match_words = 'do:end'

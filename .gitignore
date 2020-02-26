@@ -22,3 +22,10 @@
 !cbacklight
 !git/
 !config
+!manjaro_i3/
+!manjaro_i3/bash_profile
+!manjaro_i3/bashrc
+!manjaro_i3/dmenurc
+!manjaro_i3/i3config
+!manjaro_i3/i3statusconfig
+!manjaro_i3/volumeicon

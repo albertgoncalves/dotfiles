@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -eu -o pipefail
+
+cp dmenurc          "$HOME/.dmenurc"
+cp compton.conf     "$HOME/.config/compton.conf"
+cp volumeicon       "$HOME/.config/volumeicon/volumeicon"
+cp i3config         "$HOME/.i3/config"
+cp i3statusconfig   "$HOME/.config/i3status/config"
+cp alacritty.yml    "$HOME/.config/alacritty/alacritty.yml"

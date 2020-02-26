@@ -10,4 +10,4 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls="ls --color=auto"
 alias ll="ls -l"
-alias nautilus="nautilus --no-desktop"
+# alias nautilus="nautilus --no-desktop"

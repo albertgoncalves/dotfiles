@@ -36,10 +36,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
     vim_shared
     cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
     cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
-    if [ ! -d "$HOME/.config/alacritty" ]; then
-        mkdir -p "$HOME/.config/alacritty"
-    fi
-    cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
+    # if [ ! -d "$HOME/.config/alacritty" ]; then
+    #     mkdir -p "$HOME/.config/alacritty"
+    # fi
+    # cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
 else
     cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
     bash_shared
@@ -48,16 +48,20 @@ else
     vim_shared
     cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
     cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
-    cp "$WD/i3/i3.config"       "$HOME/.config/i3/config"
-    cp "$WD/i3/i3status.config" "$HOME/.config/i3status/config"
-    if [ ! -d "$HOME/bin" ]; then
-        mkdir "$HOME/bin"
+    if [ ! -d "$HOME/.config/alacritty" ]; then
+        mkdir -p "$HOME/.config/alacritty"
     fi
-    cp "$WD/bin/cbacklight"     "$HOME/bin/cbacklight"
-    cp "$WD/i3/fehbg"           "$HOME/.fehbg"
-    cp "$WD/i3/redshift"        "$HOME/.redshift"
+    cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
+    # cp "$WD/i3/i3.config"       "$HOME/.config/i3/config"
+    # cp "$WD/i3/i3status.config" "$HOME/.config/i3status/config"
+    # if [ ! -d "$HOME/bin" ]; then
+    #     mkdir "$HOME/bin"
+    # fi
+    # cp "$WD/bin/cbacklight"     "$HOME/bin/cbacklight"
+    # cp "$WD/i3/fehbg"           "$HOME/.fehbg"
+    # cp "$WD/i3/redshift"        "$HOME/.redshift"
 fi
-cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
+# cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
 if [ ! -f "$HOME/.gitconfig" ]; then
     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
     cp "$WD/git/config"         "$HOME/.gitconfig"

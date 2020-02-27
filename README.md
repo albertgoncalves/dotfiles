@@ -2,7 +2,6 @@
 
 ### Install
 *   [Nix](https://nixos.org/nix/)
-*   [Conda](https://anaconda.org/) (optional)
 
 ---
 ### Prepare
@@ -10,12 +9,4 @@
 
 ```
 export GIT_URL="https://raw.githubusercontent.com/..."
-```
-
----
-### Invoke
-(This may be a **little** destructive.)
-```
-$ nix-shell
-[nix-shell:path/to/dotfiles]$ ./main
 ```

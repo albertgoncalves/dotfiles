@@ -3,6 +3,7 @@
 set -eu
 
 cp bash_profile     "$HOME/.bash_profile"
+cp profile          "$HOME/.profile"
 cp bashrc           "$HOME/.bashrc"
 cp dmenurc          "$HOME/.dmenurc"
 cp compton.conf     "$HOME/.config/compton.conf"

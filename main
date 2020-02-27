@@ -2,12 +2,12 @@
 
 set -eu -o pipefail
 
-bash_shared () {
-    echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"
-    if [ -d "$HOME/miniconda3" ]; then
-        echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
-    fi
-}
+# bash_shared () {
+#     echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"
+#     if [ -d "$HOME/miniconda3" ]; then
+#         echo ". $HOME/miniconda3/etc/profile.d/conda.sh" >> "$HOME/.bashrc"
+#     fi
+# }
 
 vim_shared () {
     mkdir -p "$HOME/.vim/colors"
@@ -30,9 +30,9 @@ vim_shared () {
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then
-    cp "$WD/bash/profile"       "$HOME/.bash_profile"
-    cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
-    bash_shared
+    # cp "$WD/bash/profile"       "$HOME/.bash_profile"
+    # cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
+    # bash_shared
     vim_shared
     cp "$WD/vim/darwin.vimrc"   "$HOME/.vimrc"
     cp "$WD/vim/bla.vim"        "$HOME/.vim/colors/bla.vim"
@@ -41,17 +41,17 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # fi
     # cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
 else
-    cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
-    bash_shared
-    echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"
-    mv "$WD/tmp.bashrc"         "$HOME/.bashrc"
+    # cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
+    # bash_shared
+    # echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"
+    # mv "$WD/tmp.bashrc"         "$HOME/.bashrc"
     vim_shared
     cp "$WD/vim/linux.vimrc"    "$HOME/.vimrc"
     cp "$WD/vim/blx.vim"        "$HOME/.vim/colors/bla.vim"
-    if [ ! -d "$HOME/.config/alacritty" ]; then
-        mkdir -p "$HOME/.config/alacritty"
-    fi
-    cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
+    # if [ ! -d "$HOME/.config/alacritty" ]; then
+    #     mkdir -p "$HOME/.config/alacritty"
+    # fi
+    # cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
     # cp "$WD/i3/i3.config"       "$HOME/.config/i3/config"
     # cp "$WD/i3/i3status.config" "$HOME/.config/i3status/config"
     # if [ ! -d "$HOME/bin" ]; then
@@ -62,7 +62,7 @@ else
     # cp "$WD/i3/redshift"        "$HOME/.redshift"
 fi
 # cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
-if [ ! -f "$HOME/.gitconfig" ]; then
-    echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
-    cp "$WD/git/config"         "$HOME/.gitconfig"
-fi
+# if [ ! -f "$HOME/.gitconfig" ]; then
+#     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
+#     cp "$WD/git/config"         "$HOME/.gitconfig"
+# fi

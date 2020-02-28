@@ -2,13 +2,18 @@
 
 set -eu
 
+timedatectl set-ntp true
+
+echo "Adjust power settings     -> \`$ xfce4-power-manager-settings\`"
+echo "Set background wallpaper  -> \`$ nitrogen\`"
+
 cp bash_profile     "$HOME/.bash_profile"
 cp profile          "$HOME/.profile"
 cp bashrc           "$HOME/.bashrc"
-cp dmenurc          "$HOME/.dmenurc"
+# cp dmenurc          "$HOME/.dmenurc"
 cp compton.conf     "$HOME/.config/compton.conf"
 cp volumeicon       "$HOME/.config/volumeicon/volumeicon"
 cp i3config         "$HOME/.i3/config"
 cp i3statusconfig   "$HOME/.config/i3status/config"
-cp alacritty.yml    "$HOME/.config/alacritty/alacritty.yml"
+# cp alacritty.yml    "$HOME/.config/alacritty/alacritty.yml"
 cp mimeapps.list    "$HOME/.config/mimeapps.list"

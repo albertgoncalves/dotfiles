@@ -171,6 +171,8 @@ terminus-font
 texinfo
 tlp
 tree
+ttf-arphic-uming
+ttf-baekmuk
 ttf-bitstream-vera
 ufw
 upower

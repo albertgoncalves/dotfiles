@@ -2,6 +2,7 @@
 
 set -eu
 
+sudo pacman -S --needed - < pkglist.txt
 timedatectl set-ntp true
 
 echo "Adjust power settings     -> \`$ xfce4-power-manager-settings\`"
@@ -15,5 +16,5 @@ cp compton.conf     "$HOME/.config/compton.conf"
 cp volumeicon       "$HOME/.config/volumeicon/volumeicon"
 cp i3config         "$HOME/.i3/config"
 cp i3statusconfig   "$HOME/.config/i3status/config"
-# cp alacritty.yml    "$HOME/.config/alacritty/alacritty.yml"
+cp alacritty.yml    "$HOME/.config/alacritty.yml"
 cp mimeapps.list    "$HOME/.config/mimeapps.list"

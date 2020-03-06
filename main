@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu -o pipefail
+set -euo pipefail
 
 # bash_shared () {
 #     echo ". $HOME/.nix-profile/etc/profile.d/nix.sh" >> "$HOME/.bashrc"

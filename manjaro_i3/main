@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -eu
+set -euo pipefail
 
 sudo pacman -S --needed - < pkglist.txt
 timedatectl set-ntp true

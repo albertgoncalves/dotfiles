@@ -60,6 +60,7 @@ gvfs-afc
 gvfs-gphoto2
 gvfs-mtp
 gvfs-smb
+gvim
 gzip
 htop
 i3-default-artwork
@@ -180,7 +181,6 @@ usbutils
 util-linux
 vi
 viewnior
-vim
 volumeicon
 vulkan-intel
 vulkan-radeon

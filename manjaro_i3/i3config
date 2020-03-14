@@ -440,7 +440,7 @@ mode "$mode_gaps_outer" {
 # exec xset s 60
 
 # Crank up keyboard Repeat
-exec xset r rate 200 40
+exec_always xset r rate 185 40
 
 # Kick off `$ redshift` color adjustment
 exec ~/.redshift

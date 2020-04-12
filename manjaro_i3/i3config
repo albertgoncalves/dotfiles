@@ -444,7 +444,7 @@ mode "$mode_gaps_outer" {
 
 # NOTE: Crank up keyboard Repeat
 # exec_always --no-startup-id "xset r rate 200 40"
-exec_always "xset r rate 200 40"
+exec_always "xset r rate 200 60"
 
 # NOTE: Due to a bug in i3, `xfce...` must be `exec`'d after `xset` in order to
 # `xset` to take affect on reboot

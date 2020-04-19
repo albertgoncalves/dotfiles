@@ -12,6 +12,7 @@ set -euo pipefail
 vim_shared () {
     mkdir -p "$HOME/.vim/colors"
     mkdir -p "$HOME/.vim/syntax"
+    mkdir -p "$HOME/.vim/after/syntax"
 
     f () {
         if [ ! -f "$HOME/.vim/syntax/$2" ]; then
@@ -27,6 +28,11 @@ vim_shared () {
     f "typescript-vim/master/syntax/typescript.vim"         "typescript.vim"
     f "rust.vim/master/syntax/rust.vim"                     "rust.vim"
     f "vim-crystal/master/syntax/crystal.vim"               "crystal.vim"
+
+    if [ ! -f "$HOME/.vim/after/syntax/c.vim" ]; then
+        curl "$GIT_URL/c-syntax.vim/master/after/syntax/c.vim" \
+            > "$HOME/.vim/after/syntax/c.vim"
+    fi
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then

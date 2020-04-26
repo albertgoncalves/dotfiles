@@ -12,7 +12,8 @@ set autoindent
 set pastetoggle=<F2>
 set timeout timeoutlen=150
 
-colo bla
+colo gruvbox
+set background=dark
 
 xnoremap <leader>b xi()<Esc>P
 xnoremap <leader>c xi{}<Esc>P

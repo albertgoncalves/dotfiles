@@ -33,6 +33,10 @@ autocmd BufNewFile,BufRead *.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufRead *.go retab
 autocmd FileType ruby,crystal,wast setlocal shiftwidth=2 softtabstop=2
+autocmd FileType c,cpp,javascript,typescript,sh
+    \ syntax match NoteIntoTodo contained "NOTE"
+    \ containedin=.*Comment.*
+hi def link NoteIntoTodo TODO
 
 runtime macros/matchit.vim
 let b:match_words = 'do:end'

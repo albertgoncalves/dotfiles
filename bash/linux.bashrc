@@ -10,5 +10,6 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls="ls --color=auto"
 alias ll="ls -l"
+alias vi=nvim
 alias vim=nvim
 # alias nautilus="nautilus --no-desktop"

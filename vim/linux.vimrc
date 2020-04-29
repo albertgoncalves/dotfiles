@@ -26,6 +26,9 @@ set clipboard=unnamedplus
 set backspace=2
 set pastetoggle=<F2>
 
+nnoremap <esc> :noh<return><esc>
+nnoremap <esc>^[ <esc>^[
+
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * retab
 autocmd BufNewFile,BufRead *.fut setlocal filetype=fut

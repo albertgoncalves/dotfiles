@@ -1,18 +1,19 @@
 syntax on
+set termguicolors
+colo nord
+
 set number
 set cursorline
 set colorcolumn=80
 set laststatus=2
 set statusline+=%F\ %l:%c
+
+set timeout timeoutlen=150
+
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set autoindent
-set pastetoggle=<F2>
-set timeout timeoutlen=150
-
-set termguicolors
-colo nord
+filetype indent off
 
 xnoremap <leader>b xi()<Esc>P
 xnoremap <leader>c xi{}<Esc>P
@@ -32,7 +33,7 @@ autocmd BufNewFile,BufRead *.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufRead *.go retab
 autocmd FileType ruby,crystal,wast setlocal shiftwidth=2 softtabstop=2
-autocmd FileType c,cpp,javascript,typescript,sh
+autocmd FileType c,cpp,javascript,typescript,sh,r
     \ syntax match NoteIntoTodo contained "NOTE"
     \ containedin=.*Comment.*
 hi def link NoteIntoTodo TODO

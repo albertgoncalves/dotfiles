@@ -7,13 +7,12 @@ set statusline+=%F\ %l:%c
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set t_Co=256
 set autoindent
 set pastetoggle=<F2>
 set timeout timeoutlen=150
 
-colo gruvbox
-set background=dark
+set termguicolors
+colo nord
 
 xnoremap <leader>b xi()<Esc>P
 xnoremap <leader>c xi{}<Esc>P

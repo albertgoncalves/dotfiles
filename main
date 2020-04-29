@@ -34,9 +34,9 @@ vim_shared () {
             > "$HOME/.vim/after/syntax/c.vim"
     fi
 
-    if [ ! -f "$HOME/.vim/colors/gruvbox.vim" ]; then
-        curl "$GIT_URL/gruvbox/master/colors/gruvbox.vim" > \
-            "$HOME/.vim/colors/gruvbox.vim"
+    if [ ! -f "$HOME/.vim/colors/nord.vim" ]; then
+        curl "$GIT_URL/nord-vim/develop/colors/nord.vim" > \
+            "$HOME/.vim/colors/nord.vim"
     fi
 }
 
@@ -77,3 +77,9 @@ fi
 #     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
 #     cp "$WD/git/config"         "$HOME/.gitconfig"
 # fi
+if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
+    mkdir "$HOME/.config/nvim"
+    cp "$WD/vim/init.vim" "$HOME/.config/nvim/init.vim"
+else
+    echo found it!
+fi

@@ -152,6 +152,7 @@ alias ls="ls --color=auto"
 alias ll="ls -l"
 alias vi=nvim
 alias vim=nvim
+export SUDO_EDITOR=/usr/bin/nvim
 
 # moved to ~/.profile
 # . /home/albert/.nix-profile/etc/profile.d/nix.sh

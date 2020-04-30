@@ -80,6 +80,4 @@ fi
 if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
     mkdir "$HOME/.config/nvim"
     cp "$WD/vim/init.vim" "$HOME/.config/nvim/init.vim"
-else
-    echo found it!
 fi

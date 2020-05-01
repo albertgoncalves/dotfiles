@@ -1,6 +1,7 @@
 syntax on
 set termguicolors
-colo nord
+set background=dark
+colo gruvbox
 
 set number
 set cursorline

@@ -33,14 +33,13 @@ vim_shared () {
         curl "$GIT_URL/c-syntax.vim/master/after/syntax/c.vim" \
             > "$HOME/.vim/after/syntax/c.vim"
     fi
-
-    if [ ! -f "$HOME/.vim/colors/nord.vim" ]; then
-        curl "$GIT_URL/nord-vim/develop/colors/nord.vim" > \
-            "$HOME/.vim/colors/nord.vim"
-    fi
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then
+    if [ ! -f "$HOME/.vim/colors/gruvbox.vim" ]; then
+        curl "$GIT_URL/gruvbox/master/colors/gruvbox.vim" > \
+            "$HOME/.vim/colors/gruvbox.vim"
+    fi
     # cp "$WD/bash/profile"       "$HOME/.bash_profile"
     # cp "$WD/bash/darwin.bashrc" "$HOME/.bashrc"
     # bash_shared
@@ -52,6 +51,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
     # fi
     # cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
 else
+    if [ ! -f "$HOME/.vim/colors/nord.vim" ]; then
+        curl "$GIT_URL/nord-vim/develop/colors/nord.vim" > \
+            "$HOME/.vim/colors/nord.vim"
+    fi
     # cp "$WD/bash/linux.bashrc"  "$HOME/.bashrc"
     # bash_shared
     # echo "" | cat "/etc/skel/.bashrc" - "$HOME/.bashrc" > "$WD/tmp.bashrc"

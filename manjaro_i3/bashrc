@@ -157,5 +157,7 @@ export SUDO_EDITOR=/usr/bin/nvim
 # moved to ~/.profile
 # . /home/albert/.nix-profile/etc/profile.d/nix.sh
 
+. /usr/share/git/completion/git-completion.bash
+
 HISTFILESIZE=1000000
 HISTSIZE=1000000

@@ -1,6 +1,7 @@
 syntax on
 set termguicolors
 colo nord
+autocmd FileType ocaml colo gruvbox
 
 set number
 set cursorline

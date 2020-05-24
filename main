@@ -51,6 +51,10 @@ if [ "$(uname -s)" = "Darwin" ]; then
     #     mkdir -p "$HOME/.config/alacritty"
     # fi
     # cp "$WD/alacritty/alacritty.yml"    "$HOME/.config/alacritty/alacritty.yml"
+    # if [ ! -f "$HOME/.gitconfig" ]; then
+    #     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
+    #     cp "$WD/git/darwin.config"         "$HOME/.gitconfig"
+    # fi
 else
     if [ ! -f "$HOME/.vim/colors/nord.vim" ]; then
         curl "$GIT_URL/nord-vim/develop/colors/nord.vim" > \
@@ -75,12 +79,12 @@ else
     # cp "$WD/bin/cbacklight"     "$HOME/bin/cbacklight"
     # cp "$WD/i3/fehbg"           "$HOME/.fehbg"
     # cp "$WD/i3/redshift"        "$HOME/.redshift"
+    # if [ ! -f "$HOME/.gitconfig" ]; then
+    #     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
+    #     cp "$WD/git/linux.config"         "$HOME/.gitconfig"
+    # fi
 fi
 # cp "$WD/tmux/tmux.conf"         "$HOME/.tmux.conf"
-# if [ ! -f "$HOME/.gitconfig" ]; then
-#     echo Update "$HOME/.gitconfig" with \`user.name\` and \`user.email\`!
-#     cp "$WD/git/config"         "$HOME/.gitconfig"
-# fi
 if [ ! -f "$HOME/.config/nvim/init.vim" ]; then
     mkdir "$HOME/.config/nvim"
     cp "$WD/vim/init.vim" "$HOME/.config/nvim/init.vim"

@@ -39,7 +39,7 @@ autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufRead *.go retab
-autocmd FileType ruby,crystal,wast setlocal shiftwidth=2 softtabstop=2
+autocmd FileType ruby,crystal,haskell,wast setlocal shiftwidth=2 softtabstop=2
 autocmd FileType c,cpp,javascript,typescript,sh,r,wast
     \ syntax match NoteIntoTodo contained "NOTE"
     \ containedin=.*Comment.*

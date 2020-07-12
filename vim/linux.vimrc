@@ -1,7 +1,7 @@
 syntax on
 set termguicolors
 colo nord
-autocmd FileType typescript colo gruvbox
+autocmd FileType javascript,typescript colo gruvbox
 
 set number
 set cursorline

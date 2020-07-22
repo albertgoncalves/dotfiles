@@ -38,6 +38,11 @@ vim_shared () {
         curl "$GIT_URL/gruvbox/master/colors/gruvbox.vim" > \
             "$HOME/.vim/colors/gruvbox.vim"
     fi
+
+    if [ ! -f "$HOME/.vim/syntax/glsl.vim" ]; then
+        curl "https://www.vim.org/scripts/download_script.php?src_id=3194" > \
+            "$HOME/.vim/syntax/glsl.vim"
+    fi
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then

@@ -41,3 +41,4 @@ hi def link NoteIntoTodo TODO
 
 runtime macros/matchit.vim
 let b:match_words = 'do:end'
+let b:match_words = '<:>'

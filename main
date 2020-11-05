@@ -43,6 +43,12 @@ vim_shared () {
         curl "https://www.vim.org/scripts/download_script.php?src_id=3194" > \
             "$HOME/.vim/syntax/glsl.vim"
     fi
+
+    for x in glsl python; do
+        if [ ! -f "$HOME/.vim/after/syntax/$x.vim" ]; then
+            cp "$WD/vim/match_function.vim" "$HOME/.vim/after/syntax/$x.vim"
+        fi
+    done
 }
 
 if [ "$(uname -s)" = "Darwin" ]; then

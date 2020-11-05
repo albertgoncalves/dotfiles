@@ -1,1 +1,1 @@
-syn match Function "[A-Za-z][A-Za-z0-9]*("me=e-1
+syn match Function "[A-Za-z_][A-Za-z_0-9]*("me=e-1

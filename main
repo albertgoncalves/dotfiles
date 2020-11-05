@@ -44,7 +44,7 @@ vim_shared () {
             "$HOME/.vim/syntax/glsl.vim"
     fi
 
-    for x in glsl python; do
+    for x in glsl python javascript typescript; do
         if [ ! -f "$HOME/.vim/after/syntax/$x.vim" ]; then
             cp "$WD/vim/match_function.vim" "$HOME/.vim/after/syntax/$x.vim"
         fi

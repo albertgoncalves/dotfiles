@@ -45,6 +45,7 @@ autocmd FileType c,cpp,glsl,haskell,javascript,typescript,sh,r,wast
     \ syntax match NoteIntoTodo contained "NOTE"
     \ containedin=.*Comment.*
 hi def link NoteIntoTodo TODO
+autocmd FileType make set noexpandtab
 
 runtime macros/matchit.vim
 let b:match_words = 'do:end'

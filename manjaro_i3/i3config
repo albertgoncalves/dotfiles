@@ -452,3 +452,6 @@ exec --no-startup-id xfce4-power-manager
 
 # NOTE: Kick off `$ redshift` color adjustment
 exec ~/.redshift
+
+# NOTE: For graphics dev, harness window title to disable tiling.
+for_window [title="float"] floating enable

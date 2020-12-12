@@ -2,3 +2,5 @@
 
 syn match Type "\<'[A-Za-z0-9_]*\>"
 syn match Structure "\<[A-Z][A-Za-z]*\>"
+syn match String "'\\n'"
+syn match String "'.'"

@@ -1,7 +1,7 @@
 syntax on
 set termguicolors
 colo nord
-autocmd FileType javascript,typescript colo gruvbox
+autocmd FileType javascript,typescript,nasm colo gruvbox
 
 set number
 set cursorline
@@ -39,6 +39,7 @@ autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufNewFile,BufRead *.frag,*.vert,*.glsl setlocal filetype=glsl
+autocmd BufNewFile,BufRead *.asm setlocal filetype=nasm
 autocmd BufRead *.go retab
 autocmd FileType ruby,crystal,haskell,wast setlocal shiftwidth=2 softtabstop=2
 autocmd FileType asm,c,cpp,glsl,haskell,javascript,r,sh,typescript,vim,wast

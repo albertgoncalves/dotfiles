@@ -52,7 +52,7 @@ vim_shared () {
         cp "$WD/vim/after_syntax_ocaml.vim" "$HOME/.vim/after/syntax/ocaml.vim"
     fi
 
-    for x in python javascript typescript; do
+    for x in python javascript stan typescript; do
         if [ ! -f "$HOME/.vim/after/syntax/$x.vim" ]; then
             cp "$WD/vim/match_function.vim" "$HOME/.vim/after/syntax/$x.vim"
         fi

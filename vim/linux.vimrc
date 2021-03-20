@@ -32,14 +32,14 @@ nnoremap <esc>^[ <esc>^[
 
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * retab
+autocmd BufNewFile,BufRead *.asm setlocal filetype=nasm
+autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
+autocmd BufNewFile,BufRead *.frag,*.vert,*.glsl setlocal filetype=glsl
 autocmd BufNewFile,BufRead *.fut setlocal filetype=fut
 autocmd BufNewFile,BufRead *.nix setlocal filetype=nix
 autocmd BufNewFile,BufRead *.rs,*.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
-autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
-autocmd BufNewFile,BufRead *.frag,*.vert,*.glsl setlocal filetype=glsl
-autocmd BufNewFile,BufRead *.asm setlocal filetype=nasm
 autocmd BufRead *.go retab
 autocmd FileType ruby,crystal,haskell,wast setlocal shiftwidth=2 softtabstop=2
 autocmd FileType

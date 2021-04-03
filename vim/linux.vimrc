@@ -41,7 +41,9 @@ autocmd BufNewFile,BufRead *.rs,*.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufRead *.go retab
-autocmd FileType ruby,crystal,haskell,wast setlocal shiftwidth=2 softtabstop=2
+autocmd
+    \ FileType crystal,ruby,haskell,ocaml,wast
+    \ setlocal shiftwidth=2 softtabstop=2
 autocmd FileType
     \ asm,c,cpp,glsl,haskell,javascript,r,sh,stan,typescript,vim,wast
     \ syntax match NoteIntoTodo contained "NOTE"

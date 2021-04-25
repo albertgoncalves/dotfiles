@@ -27,6 +27,7 @@ nmap <leader>p :r! cat /tmp/vitmp<CR>
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * retab
 autocmd BufNewFile,BufRead *.fut setlocal filetype=fut
+autocmd BufNewFile,BufRead *.jl setlocal filetype=julia
 autocmd BufNewFile,BufRead *.nix setlocal filetype=nix
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript

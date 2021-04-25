@@ -44,6 +44,11 @@ vim_shared () {
             "$HOME/.vim/syntax/glsl.vim"
     fi
 
+    if [ ! -f "$HOME/.vim/syntax/julia.vim" ]; then
+        curl "$GIT_URL/julia-vim/master/syntax/julia.vim" > \
+            "$HOME/.vim/syntax/julia.vim"
+    fi
+
     if [ ! -f "$HOME/.vim/after/syntax/glsl.vim" ]; then
         cp "$WD/vim/after_syntax_glsl.vim" "$HOME/.vim/after/syntax/glsl.vim"
     fi

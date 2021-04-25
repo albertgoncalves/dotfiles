@@ -36,6 +36,7 @@ autocmd BufNewFile,BufRead *.asm setlocal filetype=nasm
 autocmd BufNewFile,BufRead *.cr setlocal filetype=crystal
 autocmd BufNewFile,BufRead *.frag,*.vert,*.glsl setlocal filetype=glsl
 autocmd BufNewFile,BufRead *.fut setlocal filetype=fut
+autocmd BufNewFile,BufRead *.jl setlocal filetype=julia
 autocmd BufNewFile,BufRead *.nix setlocal filetype=nix
 autocmd BufNewFile,BufRead *.rs,*.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
@@ -45,7 +46,7 @@ autocmd
     \ FileType crystal,ruby,haskell,ocaml,wast
     \ setlocal shiftwidth=2 softtabstop=2
 autocmd FileType
-    \ asm,c,cpp,glsl,haskell,javascript,r,sh,stan,typescript,vim,wast
+    \ asm,c,cpp,glsl,haskell,javascript,julia,r,sh,stan,typescript,vim,wast
     \ syntax match NoteIntoTodo contained "NOTE"
     \ containedin=.*Comment.*
 hi def link NoteIntoTodo TODO

@@ -29,6 +29,7 @@ set pastetoggle=<F2>
 
 nnoremap <esc> :noh<return><esc>
 nnoremap <esc>^[ <esc>^[
+nnoremap Q <Nop>
 
 autocmd BufWritePre * %s/\s\+$//e
 autocmd BufWritePre * retab

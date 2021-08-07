@@ -41,5 +41,4 @@ autocmd FileType asm,c,cpp,glsl,haskell,javascript,r,sh,typescript,vim,wast
 hi def link NoteIntoTodo TODO
 
 runtime macros/matchit.vim
-let b:match_words = 'do:end'
-let b:match_words = '<:>'
+let b:match_words = "<:>"

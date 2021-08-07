@@ -45,7 +45,7 @@ autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufRead *.go retab
 autocmd
-    \ FileType crystal,ruby,haskell,ocaml,wast
+    \ FileType crystal,ruby,haskell,wast
     \ setlocal shiftwidth=2 softtabstop=2
 autocmd FileType
     \ asm,c,cpp,glsl,haskell,javascript,julia,r,sh,stan,typescript,vim,wast

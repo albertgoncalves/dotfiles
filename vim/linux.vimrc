@@ -1,7 +1,7 @@
 syntax on
 set termguicolors
 colo nord
-autocmd FileType javascript,typescript,nasm colo gruvbox
+autocmd FileType javascript,nasm,typescript colo gruvbox
 
 set number
 set cursorline
@@ -44,14 +44,32 @@ autocmd BufNewFile,BufRead *.rs,*.pest setlocal filetype=rust
 autocmd BufNewFile,BufRead *.stan setlocal filetype=stan
 autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufRead *.go retab
+<<<<<<< HEAD
 autocmd
     \ FileType crystal,ruby,haskell,wast
+=======
+
+autocmd FileType crystal,ruby,haskell,wast
+>>>>>>> 8a1e1df077cda7fd35d958117a785e1d2e495924
     \ setlocal shiftwidth=2 softtabstop=2
-autocmd FileType
-    \ asm,c,cpp,glsl,haskell,javascript,julia,r,sh,stan,typescript,vim,wast
-    \ syntax match NoteIntoTodo contained "NOTE"
-    \ containedin=.*Comment.*
+autocmd
+    \ FileType
+        \ asm
+        \,c
+        \,cpp
+        \,glsl
+        \,haskell
+        \,java
+        \,javascript
+        \,r
+        \,sh
+        \,stan
+        \,typescript
+        \,vim
+        \,wast
+    \ syntax match NoteIntoTodo contained "NOTE" containedin=.*Comment.*
 hi def link NoteIntoTodo TODO
+
 autocmd FileType make set noexpandtab
 
 runtime macros/matchit.vim
